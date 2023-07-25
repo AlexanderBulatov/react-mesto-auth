@@ -28,7 +28,7 @@ export function Login (props) {
       .then((data) => {
         if (data.token){
           props.handleLogin();
-          props.hanldeInfoTooltipOk();
+          //props.hanldeInfoTooltipOk();
           navigate('/', {replace: true});
         }
       })
