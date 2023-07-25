@@ -30,7 +30,6 @@ export function Login (props) {
           props.handleLogin();
           props.hanldeInfoTooltipOk();
           navigate('/', {replace: true});
-          console.log(email, pass);
         }
       })
       .catch((err) => {
