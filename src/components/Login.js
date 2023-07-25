@@ -1,5 +1,4 @@
 import React from 'react';
-import {useEffect, useState, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom'; 
 import * as auth  from '../auth.js';
 import { SignPage } from './SignPage.js';

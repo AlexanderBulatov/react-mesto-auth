@@ -1,6 +1,6 @@
 import React from 'react';
 import {useEffect, useState, useRef } from 'react';
-import {BrowserRouter, Route, Routes, Navigate, useNavigate} from 'react-router-dom';
+import {Route, Routes, Navigate, useNavigate} from 'react-router-dom';
 import { Header } from './Header.js';
 import { Main } from './Main.js';
 import { Footer } from './Footer.js';
@@ -11,6 +11,7 @@ import { EditProfilePopup } from './EditProfilePopup.js';
 import { EditAvatarPopup } from './EditAvatarPopup.js';
 import { AddPlacePopup } from './AddPlacePopup.js';
 import { ConfirmDeletePopup } from './ConfirmDeletePopup.js';
+
 import {InfoTooltip} from './InfoTooltip.js'
 import { Login } from './Login.js';
 import { Register } from './Register.js';
@@ -110,9 +111,6 @@ function App() {
     })
     .catch(handleError);
   }
-
-
-  //const cardForDelete = React.useRef(null);
  
   function handleCardDelete(card) {
     setDeletedCard(card);
@@ -168,8 +166,9 @@ function App() {
     setAddPlacePopupOpen(false);
     setEditProfilePopupOpen(false);
     setEditAvatarPopupOpen(false);
-    // setConfirmDeletePopupOpen(false);
+
     modeInfoTooltip.isOk ? setInfoTooltip({isOpen: false, isOk:true}):setInfoTooltip({isOpen: false, isOk:false});
+    
     setSelectedCard(null);
     setDeletedCard(null);
   }
