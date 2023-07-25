@@ -1,0 +1,30 @@
+.profile__foto-wrapper {
+  display: inline-block;
+  font-size: 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.profile__foto-wrapper:hover::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url('../../../images/pencil.svg');
+  background-color: rgba(0, 0, 0, 0.8);
+  background-size: 26px 26px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1050px)  {
+  .profile__foto-wrapper  {
+    margin-bottom: 26px;
+  }
+}

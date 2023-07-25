@@ -1,0 +1,23 @@
+.sign__input {
+  width: 100%;
+  display: block;
+  border-style: none;
+  box-sizing: border-box;
+  border-bottom: 2px solid rgba(204, 204, 204, 1);
+  color: #fff;
+  background-color: #000;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  margin:  0 0 4px 0;
+  padding: 0 0 9px 0;
+  
+}
+
+.sign__input:first-of-type{
+  margin-top: 0px;
+}
+
+.sign__input::placeholder {
+  color: #ccc;
+}

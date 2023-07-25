@@ -1,0 +1,15 @@
+.profile__name-area {
+  display: flex;
+  align-items: baseline;
+}
+@media screen and (max-width: 1050px)  {
+  .profile__name-area  {
+    justify-content: center;
+    margin-left: 42px;
+  }
+}
+@media screen and (max-width: 650px)  {
+  .profile__name-area  {
+    margin-left: 28px;
+  }
+}
