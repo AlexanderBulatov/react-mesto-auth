@@ -68,8 +68,9 @@ function App() {
     }
   }
 
-  const handleLogin = () => {
+  const handleLogin = (email) => {
     setLoggedIn(true);
+    setUserData(email);
   }
 
   const handleLogOff = () => {

@@ -27,7 +27,7 @@ export function Login (props) {
     auth.authorize(email, pass)
       .then((data) => {
         if (data.token){
-          props.handleLogin();
+          props.handleLogin(email);
           //props.hanldeInfoTooltipOk();
           navigate('/', {replace: true});
         }
