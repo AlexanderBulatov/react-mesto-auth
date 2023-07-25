@@ -33,4 +33,4 @@ __В работе, прежде всего, демонстрируется:__
 ### Coming soon...
 Разработка бэкенда приложения
 ***
-[Проект Mesto (портирование на React, API (12))](https://alexanderbulatov.github.io/mesto-react-auth/)
+[Проект Mesto (портирование на React, API (12))](https://alexanderbulatov.github.io/react-mesto-auth/)
