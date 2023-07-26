@@ -1,33 +1,17 @@
 import React from 'react';
-import {useEffect, useState, useRef } from 'react';
-import { signValidationConfig, signFormValidators } from '../utils/constants.js'
-import { FormValidator } from '../utils/FormValidator.js';
+import { useEffect, useState, useRef } from 'react';
 
-export function SignPage (props) {
+export function SignPage(props) {
 
   //------------- control component lifecycle
   const mounted = useRef(false);
   useEffect(() => {
     mounted.current = true;
-
     return () => {
-        mounted.current = false;
+      mounted.current = false;
     };
-}, []);
-  //------------- component lifecycle
+  }, []);
 
-
-  const enableValidationForms = (config) => {
-    const formList = Array.from(document.querySelectorAll(config.formSelector))
-    formList.forEach((formElement) => {
-      const validator = new FormValidator(config, formElement)
-      const formName = formElement.getAttribute('name')
-      signFormValidators[formName] = validator;
-      validator.enableValidation();
-    });
-  };
-  
-  enableValidationForms(signValidationConfig);
 
   const [email, setEmail] = useState('');
   const [pass, setPass] = useState('');

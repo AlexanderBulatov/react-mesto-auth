@@ -1,20 +1,26 @@
-import React from 'react';
-import { Link, useNavigate } from 'react-router-dom'; 
-import * as auth  from '../auth.js';
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom'; 
+import * as auth  from '../utils/auth.js';
 import { SignPage } from './SignPage.js';
 
-export function Login (props) {
-  
-// const mounted = useRef(false);
-// useEffect(() => {
-//     mounted.current = true;
-//     console.log('Login mount');
+import { signValidationConfig, signFormValidators } from '../utils/constants.js'
+import { FormValidator } from '../utils/FormValidator.js';
 
-//     return () => {
-//         mounted.current = false;
-//         console.log('Login unmount');
-//     };
-// }, []);
+export function Login(props) {
+
+  useEffect(() => {
+    const enableValidationForms = (config) => {
+      const formList = Array.from(document.querySelectorAll(config.formSelector))
+      formList.forEach((formElement) => {
+        const validator = new FormValidator(config, formElement)
+        const formName = formElement.getAttribute('name')
+        signFormValidators[formName] = validator;
+        validator.enableValidation();
+      });
+    };
+
+    enableValidationForms(signValidationConfig);
+  }, []);
 
 
   const navigate = useNavigate();

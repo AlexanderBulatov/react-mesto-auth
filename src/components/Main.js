@@ -6,7 +6,7 @@ export function Main(props) {
   const currentUser = React.useContext(CurrentUserContext);
 
   return (
-    <>
+    <main className="page__main">
           <section className="profile">
             <div className="profile__foto-wrapper" onClick={props.onEditAvatar}>
               {/* <%=require('./images/JIKusto.jpg')%> */}
@@ -31,6 +31,6 @@ export function Main(props) {
               />
             ))}
           </section>
-    </>
+    </main>
   )
 }
